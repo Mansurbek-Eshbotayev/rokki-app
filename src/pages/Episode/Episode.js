@@ -1,6 +1,6 @@
 "./character.css"
 import { useEffect, useState } from "react"
-import { Card } from "../../components/Card/Card"
+// import { Card } from "../../components/Card/Card"
 // import {Search} from "../../components/Search/Search"
 // import useDebounce from "../../components/Debounse/Debounse"
 import EpisodeFilter from "../../components/EpisodeFilter/EpisodeFilter"
@@ -10,7 +10,7 @@ export const Episode = () => {
   const [data,setData] = useState([])
   const {results} = data
   const [id, setId] = useState(1)
-  let api = `https://rickandmortyapi.com/api/episode/${id}`
+  let api = `https://rickandmortyapi.com/api/episode?page=2`
  
   
 
@@ -36,7 +36,7 @@ export const Episode = () => {
               <div className="d-flex flex-wrap gap-5">
                 {
                   results.map(item => (
-                  console.log(item)
+                  <h3>{item.name}</h3>
                   ))
                 }
               </div>
